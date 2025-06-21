@@ -1,0 +1,23 @@
+<!-- templates/trek_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ trek.title }}</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left"><span class="logo">Treksoul</span></div>
+    <div class="nav-right">
+      <a href="file:///D:/treksoul/index.html" class="nav-link">Home</a>
+    </div>
+  </nav>
+
+  <section class="trek-section">
+    <h2>{{ trek.title }}</h2>
+    <img src="{{ url_for('static', filename=trek.image) }}" alt="{{ trek.title }}" style="max-width:100%; border-radius:10px;">
+    <p style="margin-top:20px;">{{ trek.description }}</p>
+  </section>
+</body>
+</html>
