@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Recommendation - Treksoul</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #007BFF;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    select, input[type="text"], input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .result {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #e8f4fd;
+      border-radius: 8px;
+      color: #003d66;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Hotel Recommendation</h2>
+    <form action="hotel_ai.php" method="POST">
+      <label for="budget">Your Budget</label>
+      <select name="budget" required>
+        <option value="budget">Budget (Under Rs.1500)</option>
+        <option value="mid">Mid-range (Rs.1500 - Rs.3000)</option>
+        <option value="luxury">Luxury (Above Rs.3000)</option>
+      </select>
+
+      <label for="type">Hotel Type</label>
+      <select name="type" required>
+        <option value="family">Family Friendly</option>
+        <option value="solo">Solo/Backpacker</option>
+        <option value="couple">Couple Romantic</option>
+        <option value="eco">Eco Lodge</option>
+      </select>
+
+      <input type="submit" value="Recommend Hotel" />
+    </form>
+  </div>
+</body>
+</html>
